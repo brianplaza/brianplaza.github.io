@@ -1,0 +1,86 @@
+.container
+	max-width: $site-width
+	width: 90%
+	margin: 0 auto
+
+//temp header
+.coming-soon
+	@extend %pos--rel
+	margin: 0
+	overflow: hidden
+	height: 100vh
+	text-align: center
+	&:after
+		content: ''
+		@extend %pos--abs
+		height: 200px
+		bottom: -100px
+		left: -45%
+		right: -45%
+		border-radius: 50%
+		background-color: $white
+		box-shadow: 0 0px 200px 0px $glow-blue, 0 0 60px 15px $glow-blue
+		+media-query(lap)
+			height: 300px
+			bottom: -150px
+			left: -15%
+			right: -15%
+
+.coming-soon--text
+	@extend %gotham-light
+	@extend %text--uppercase
+	@extend %letter-spacing--large
+	@extend %dis-inline-block
+	+font-size(18px)
+	line-height: 90vh
+	color: #45c0ff
+	background: -webkit-linear-gradient(left, #00a8ff 0%, #a6e1ff 100%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	+media-query(lap)
+		font-size: 40px
+
+.intro
+	background: $white
+	padding: 200px 0
+	box-shadow: 0 0px 180px 0px $glow-blue, 0 0 40px 15px $glow-blue
+	font-size: 100px
+
+.about-me
+	padding: 160px 0
+
+.stats
+	@extend .grid__item
+	@extend %pos--rel
+	@extend %desk-one-half
+	@extend .cf
+	color: $white
+
+.stat-divider
+	@extend %pos--abs
+	+media-query(desk)
+		top: 50%
+		left: 0
+		right: 0
+		height: 1px
+		@include background-image(linear-gradient(left,  rgba($white,0) 0%,rgba($white,0.4) 50%,rgba($white,0) 100%))
+
+.stat-item
+	@extend .grid__item
+	@extend %lap-one-half
+	@extend %text--center
+	margin: 40px 0
+
+.stat-value,
+.stat-object
+	@extend %dis-block
+	@extend %letter-spacing--small
+
+.stat-value
+	@extend %tungsten
+	+font-size(125px)
+
+.stat-object
+	@extend %gotham-light
+	@extend %text--uppercase
+	+font-size(18px)

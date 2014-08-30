@@ -1,0 +1,65 @@
+///////////////////////////////////////////////////////
+// Grid - inspired by Inuit CSS
+///////////////////////////////////////////////////////
+
+/**
+ * basic grid elements
+ * defaults to float based
+ */
+
+.grid {
+	margin-left: -$spacing-unit-base;
+
+	&:after,
+	&:before {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+		
+}
+
+.grid__item {
+	width: 100%;
+	padding-left: $spacing-unit-base;
+	float: left;
+}
+	
+///////////////////////////////
+// grid modifiers, context, states
+///////////////////////////////
+
+/**
+ * full, gutterless modifier
+ */
+
+.grid--full {
+	margin-left: 0;
+
+	.grid__item { padding-left: 0; }		
+}
+
+/**
+ * inline modifier
+ */
+
+.grid__item {
+	
+	.grid--inline & {
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.grid--top &    { vertical-align: top; }
+	.grid--bottom & { vertical-align: bottom; }
+}
+
+/**
+ * center, right, and reverse modifier
+ * requires inline grid
+ */
+
+.grid--center { text-align: center; }
+.grid--right  { text-align: right; }
+.grid--rev    { direction: rtl; }
