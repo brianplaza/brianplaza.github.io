@@ -10,70 +10,59 @@
 //	Sun
 //-----------------------------------------------------------------------------------------
 
+.sun
+	@extend %pos--abs
+	width: 25px
+	height: 25px
+	border-radius: 50%
+	background: $white
+	top: 50%
+	left: 50%
+	box-shadow: 0 0 280px 40px #d3fbc0, 0 0 20px rgba($white, 0.5)
+	+transform(translateX(-50%) translateY(-50%))
+
+.spear
+	@extend %pos--abs
+	top: 0
+	left: 50%
+	width: 1px
+	height: 500px
+	+transform(rotate(10deg))
+	+background-image(linear-gradient(top,	rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 50%,rgba(255,255,255,0) 100%))
+
 .border-wrap
 	@extend .grid__item
-	position: relative
+	@extend %pos--rel
 	width: 500px
 	height: 500px
-	margin: 50px
 
 .border
-	position: absolute
+	@extend %pos--abs
 	top: 50%
 	left: 50%
 	border-radius: 50%
 	border-style: solid
-	border-color: rgba(white, .1) rgba(white, .2) rgba(white, .3) rgba(white, .3)
+	border-color: rgba($white, .05) rgba($white, .07) rgba($white, .1) rgba($white, .1)
+	+transform(translateX(-50%) translateY(-50%))
 		
 .border-1
-	width: 300px
-	height: 300px
-	margin: -150px 0 0 -150px
-	border-width: 10px
-	+transition(30s)
-	.border-wrap:hover &
-		+transform(rotate(3600deg))
+	width: 400px
+	height: 400px
+	border-width: 15px
 
 .border-2
-	width: 200px
-	height: 200px
-	margin: -95px 0 0 -95px
-	border-width: 5px
-	+transition(15s)
-	.border-wrap:hover &
-		+transform(rotate(-3600deg))
+	width: 350px
+	height: 350px
+	border-width: 2px
 
 .border-3
-	width: 180px
-	height: 180px
-	margin: -82px 0 0 -82px
+	width: 280px
+	height: 280px
+	border-width: 5px
+
+.border-4
+	width: 250px
+	height: 250px
 	border-width: 2px
-	+transition(5s)
-	.border-wrap:hover &
-		+transform(rotate(3600deg))
 
-.spear
-	position: absolute
-	left: 50%
-	top: 50%
-	margin: -240px 0 0 10px
-	width: 1px
-	height: 500px
-	@include background-image(linear-gradient(top,	rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 50%,rgba(255,255,255,0) 100%))
-	+transform(rotate(10deg))
-	+transition(20s)
-	.border-wrap:hover &
-		+transform(rotate(370deg))
 
-.sun
-	position: absolute
-	width: 25px
-	height: 25px
-	border-radius: 50%
-	background: white
-	top: 50%
-	left: 50%
-	box-shadow: 0 0 0 0 #d3fbc0, 0 0 20px rgba(white, 0)
-	+transition(3s)
-	.border-wrap:hover &
-		box-shadow: 0 0 180px 40px #d3fbc0, 0 0 20px rgba(white, 0.5)

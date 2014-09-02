@@ -6,10 +6,13 @@
 //temp header
 .coming-soon
 	@extend %pos--rel
+	@extend %text--center
 	margin: 0
 	overflow: hidden
 	height: 100vh
-	text-align: center
+	display: flex
+	justify-content: center
+	align-items: center
 	&:after
 		content: ''
 		@extend %pos--abs
@@ -31,14 +34,15 @@
 	@extend %text--uppercase
 	@extend %letter-spacing--large
 	@extend %dis-inline-block
-	+font-size(18px)
-	line-height: 90vh
+	+font-size(18px, $line-height:false)
+	line-height: 2
 	color: #45c0ff
 	background: -webkit-linear-gradient(left, #00a8ff 0%, #a6e1ff 100%)
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 	+media-query(lap)
 		font-size: 40px
+		line-height: 1.5
 
 .intro
 	background: $white
