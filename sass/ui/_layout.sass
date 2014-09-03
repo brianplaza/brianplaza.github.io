@@ -9,9 +9,9 @@
 	@extend %gotham-bold
 	@extend %text--uppercase
 	@extend %letter-spacing--small
-	+font-size(24px)
+	+font-size(16px)
 	overflow: hidden
-	padding: 20px 70px
+	padding: 15px 25px
 	text-decoration: none
 	border: 1px solid $white
 	transition: .3s
@@ -29,6 +29,9 @@
 		color: $text-dark
 		&:after
 			top: 0
+	+media-query(lap)
+		+font-size(24px)
+		padding: 20px 70px
 
 //temp header
 .coming-soon
@@ -94,8 +97,20 @@
 	padding: 160px 0
 
 .contact
+	@extend %pos--rel
 	@extend %text--center
-	padding: 50px 0
+	padding: 50px 0 150px 0
+	overflow: hidden
+	&:after
+		content: ''
+		@extend %pos--abs
+		bottom: -250px
+		left: 10%
+		right: 10%
+		height: 300px
+		border-radius: 50%
+		background-color: $white
+		box-shadow: 0px -10px 100px rgba($glow-blue, .75)
 
 .contact-blurb
 	@extend %gotham-light
