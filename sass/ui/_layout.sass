@@ -22,7 +22,7 @@
 		right: -45%
 		border-radius: 50%
 		background-color: $white
-		box-shadow: 0 0px 200px 0px $glow-blue, 0 0 60px 15px $glow-blue
+		box-shadow: 0 0px 200px 0px rgba($glow-blue, .75), 0 0 60px 15px rgba($glow-blue, .5)
 		+media-query(lap)
 			height: 300px
 			bottom: -150px
@@ -37,18 +37,25 @@
 	+font-size(18px, $line-height:false)
 	line-height: 2
 	color: #45c0ff
-	background: -webkit-linear-gradient(left, #00a8ff 0%, #a6e1ff 100%)
+	padding-bottom: 100px
+	background: -webkit-linear-gradient(left, #00a8ff 0%, #cfefff 100%)
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 	+media-query(lap)
-		font-size: 40px
+		+font-size(40px, $line-height:false)
 		line-height: 1.5
 
-.intro
+.coming-soon--title
+	@extend %gotham-bold
+	+font-size(16px, $line-height:false)
+	+media-query(lap)
+		+font-size(24px, $line-height:false)
+
+
+.work
 	background: $white
-	padding: 200px 0
-	box-shadow: 0 0px 180px 0px $glow-blue, 0 0 40px 15px $glow-blue
-	font-size: 100px
+	padding: 50px 0 150px 0
+	box-shadow: 0 0px 180px 0px rgba($glow-blue, .75), 0 0 40px 15px rgba($glow-blue, .5)
 
 .about-me
 	padding: 160px 0
@@ -71,8 +78,8 @@
 
 .stat-item
 	@extend .grid__item
-	@extend %lap-one-half
-	@extend %text--center
+	@extend %lap-one-fourth
+	@extend %desk-one-half
 	margin: 40px 0
 
 .stat-value,
@@ -82,9 +89,17 @@
 
 .stat-value
 	@extend %tungsten
-	+font-size(125px)
+	+font-size(130px)
+	+media-query(lap)
+		+font-size(100px)
+	+media-query(desk)
+		+font-size(125px)
 
 .stat-object
 	@extend %gotham-light
 	@extend %text--uppercase
 	+font-size(18px)
+	+media-query(lap)
+		+font-size(16px)
+	+media-query(desk)
+		+font-size(18px)
