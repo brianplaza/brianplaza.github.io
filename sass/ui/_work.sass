@@ -40,11 +40,11 @@
 .featured-name
 	@extend %pos--abs
 	@extend %margin-off
+	@extend %gotham-light
 	@extend %text--uppercase
 	@extend %text--center 
 	@extend %letter-spacing--small
 	z-index: 10
-	margin: auto
 	display: flex
 	justify-content: center
 	align-items: center
@@ -53,7 +53,7 @@
 	left: 10px
 	right: 10px
 	bottom: 10px
-	background-color: rgba(#080F1F, .9)
+	background-color: rgba(#001825, .92)
 	text-shadow: 0 0 40px $glow-blue
 	opacity: 0
 	transition: .3s
@@ -67,11 +67,17 @@
 		content: ''
 		@extend %pos--abs
 		z-index: -1
-		left: 20px
-		right: 20px
+		left: 40px
+		right: 40px
 		height: 1px
 		@extend %white-glow
 	&:before
 		top: 20px
+		top: -webkit-calc(50% - 30px)
+		top: calc(50% - 30px)
 	&:after
 		bottom: 20px
+		bottom: -webkit-calc(50% - 30px)
+		bottom: calc(50% - 30px)
+
+

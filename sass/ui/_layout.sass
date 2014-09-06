@@ -1,3 +1,44 @@
+.header
+	@extend %pos--fixed
+	z-index: 100
+	top: 0
+	left: 0
+	right: 0
+	background-color: rgba(#001825, .65)
+	&:after
+		content: ''
+		@extend %pos--abs
+		left: 20%
+		right: 20%
+		bottom: 0
+		height: 1px
+		@extend %white-glow
+
+.header-name
+	@extend %dis-block
+	@extend %gotham-bold
+	@extend %text--uppercase
+	@extend %letter-spacing--small
+	padding: 15px 0
+	color: $white
+
+.navigation
+	text-align: center
+	+media-query(lap)
+		text-align: right
+
+.menu-item
+	@extend %dis-inline-block
+	@extend %gotham-bold
+	@extend %text--uppercase
+	+font-size(12px)
+	padding: 10px
+	color: $white
+	text-decoration: none
+	+media-query(lap)
+		+font-size(14px)
+		padding: 15px 25px
+
 .container
 	max-width: $site-width
 	width: 90%
@@ -15,6 +56,7 @@
 	text-decoration: none
 	border: 1px solid $white
 	transition: .3s
+	-webkit-backface-visibility: hidden
 	&:after
 		content: ''
 		@extend %pos--abs
@@ -93,16 +135,6 @@
 	@extend %text--center
 	padding: 50px 0 150px 0
 	overflow: hidden
-	&:after
-		content: ''
-		@extend %pos--abs
-		bottom: -250px
-		left: 5%
-		right: 5%
-		height: 300px
-		border-radius: 50%
-		background-color: $white
-		box-shadow: 0px -10px 100px rgba($glow-blue, .75)
 
 .contact-blurb
 	@extend %gotham-light
