@@ -1,0 +1,77 @@
+.work
+	background: $white
+	padding: 10px 0 150px 0
+	box-shadow: 0 0px 180px 0px rgba($glow-blue, .75), 0 0 40px 15px rgba($glow-blue, .5)
+
+.portfolio-item
+	margin-bottom: 24px
+
+.featured-image-wrap
+	@extend %pos--rel
+	&:hover
+		.featured-name
+			opacity: 1
+	&:before,
+	&:after
+		content: ''
+		@extend %pos--abs	
+		width: 0
+		height: 0
+	&:before
+		bottom: -1px
+		right: -1px
+		border-bottom: 21px solid $white
+		border-left: 21px solid transparent
+		+media-query(lap)
+			border-bottom: 42px solid $white
+			border-left: 42px solid transparent
+	&:after
+		top: -1px
+		left: -1px
+		border-top: 21px solid $white
+		border-right: 21px solid transparent
+		+media-query(lap)
+			border-top: 42px solid $white
+			border-right: 42px solid transparent
+
+.featured-title
+	@extend %gotham-light
+
+.featured-name
+	@extend %pos--abs
+	@extend %margin-off
+	@extend %text--uppercase
+	@extend %text--center 
+	@extend %letter-spacing--small
+	z-index: 10
+	margin: auto
+	display: flex
+	justify-content: center
+	align-items: center
+	color: $white
+	top: 10px
+	left: 10px
+	right: 10px
+	bottom: 10px
+	background-color: rgba(#080F1F, .9)
+	text-shadow: 0 0 40px $glow-blue
+	opacity: 0
+	transition: .3s
+	+media-query(lap)
+		top: 20px
+		left: 20px
+		right: 20px
+		bottom: 20px
+	&:before,
+	&:after
+		content: ''
+		@extend %pos--abs
+		z-index: -1
+		left: 20px
+		right: 20px
+		height: 1px
+		@extend %white-glow
+	&:before
+		top: 20px
+	&:after
+		bottom: 20px

@@ -5,12 +5,12 @@
 
 .stat-divider
 	@extend %pos--abs
+	@extend %white-glow
 	+media-query(desk)
 		top: 50%
 		left: 0
 		right: 0
 		height: 1px
-		@include background-image(linear-gradient(left,  rgba($white,0) 0%,rgba($white,0.4) 50%,rgba($white,0) 100%))
 
 .stat-item
 	margin: 40px 0
