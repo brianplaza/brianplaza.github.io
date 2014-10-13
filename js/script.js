@@ -1,5 +1,7 @@
-$(document).ready(function(){
+(function($){
 
-	$('#js-header').scrollUpMenu();
+	$(document).ready(function(){
 
-});
+	});
+
+})(jQuery);

@@ -1,31 +1,31 @@
 .header
-	@extend %pos--fixed
+	@extend %pos--abs
 	z-index: 100
 	top: 0
 	left: 0
 	right: 0
-	background-color: rgba(#001825, .65)
+	text-align: center
+	transition: .3s
+	+media-query(lap)
+		text-align: right
 	&:after
 		content: ''
 		@extend %pos--abs
-		left: 20%
-		right: 20%
+		left: 10%
+		right: 10%
 		bottom: 0
 		height: 1px
 		@extend %white-glow
+		transition: 1s
 
 .header-name
 	@extend %dis-block
 	@extend %gotham-bold
 	@extend %text--uppercase
+	@extend %text--left
 	@extend %letter-spacing--small
-	padding: 15px 0
+	padding: 20px 0
 	color: $white
-
-.navigation
-	text-align: center
-	+media-query(lap)
-		text-align: right
 
 .menu-item
 	@extend %dis-inline-block
@@ -37,7 +37,7 @@
 	text-decoration: none
 	+media-query(lap)
 		+font-size(14px)
-		padding: 15px 25px
+		padding: 20px 25px
 
 .container
 	max-width: $site-width
@@ -83,27 +83,12 @@
 .coming-soon
 	@extend %pos--rel
 	@extend %text--center
-	margin: 0
+	@extend %margin-off
 	overflow: hidden
 	height: 100vh
 	display: flex
 	justify-content: center
 	align-items: center
-	&:after
-		content: ''
-		@extend %pos--abs
-		height: 200px
-		bottom: -100px
-		left: -45%
-		right: -45%
-		border-radius: 50%
-		background-color: $white
-		box-shadow: 0 0px 200px 0px rgba($glow-blue, .75), 0 0 60px 15px rgba($glow-blue, .5)
-		+media-query(lap)
-			height: 300px
-			bottom: -150px
-			left: -15%
-			right: -15%
 
 .coming-soon--text
 	@extend %gotham-light
@@ -111,21 +96,21 @@
 	@extend %letter-spacing--large
 	@extend %dis-inline-block
 	+font-size(18px, $line-height:false)
-	line-height: 2
+	line-height: 1.5
 	color: #45c0ff
-	padding-bottom: 100px
-	background: -webkit-linear-gradient(left, #00a8ff 0%, #cfefff 100%)
+	background: -webkit-linear-gradient(left, #00a8ff 0%, #309B92 100%)
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 	+media-query(lap)
-		+font-size(40px, $line-height:false)
-		line-height: 1.5
+		+font-size(36px, $line-height:flase)
 
 .coming-soon--title
+	@extend %dis-block
 	@extend %gotham-bold
 	+font-size(16px, $line-height:false)
+	line-height: 2
 	+media-query(lap)
-		+font-size(24px, $line-height:false)
+		+font-size(18px, $line-height:false)
 
 .about-me
 	padding: 160px 0

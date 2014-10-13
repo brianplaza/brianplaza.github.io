@@ -10,7 +10,7 @@ body
 	@extend %gotham-light
 
 h2
-	@extend %gotham-bold
+	@extend %gotham-light
 	@extend %text--uppercase
 	@extend %letter-spacing--large
 	@extend %text--center
@@ -19,6 +19,9 @@ h2
 	+media-query(lap)
 		+font-size(30px)
 		text-align: left
+
+a
+	text-decoration: none
 
 img
 	height: auto

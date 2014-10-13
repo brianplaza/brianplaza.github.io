@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#js-header").scrollUpMenu()});
+(function(e){e(document).ready(function(){})})(jQuery);
