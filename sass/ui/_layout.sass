@@ -22,10 +22,12 @@
 	@extend %dis-block
 	@extend %gotham-bold
 	@extend %text--uppercase
-	@extend %text--left
+	@extend %text--center
 	@extend %letter-spacing--small
 	padding: 20px 0
 	color: $white
+	+media-query(lap)
+		text-align: left
 
 .menu-item
 	@extend %dis-inline-block
