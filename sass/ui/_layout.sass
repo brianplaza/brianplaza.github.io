@@ -10,12 +10,12 @@
 		text-align: right
 	&:after
 		content: ''
+		@extend %white-glow
 		@extend %pos--abs
 		left: 10%
 		right: 10%
 		bottom: 0
 		height: 1px
-		@extend %white-glow
 		transition: 1s
 
 .header-name
@@ -34,70 +34,63 @@
 	@extend %gotham-bold
 	@extend %text--uppercase
 	+font-size(12px)
+	margin: 0 10px
 	padding: 10px
 	color: $white
 	text-decoration: none
+	vertical-align: middle
+	cursor: pointer
 	+media-query(lap)
 		+font-size(14px)
-		padding: 20px 25px
+		margin: 10px
+		padding: 10px 15px
+
+.menu-dribbble,
+.menu-linkedin
+	padding: 10px 0
+	path, rect
+		transition: .3s
+		fill: rgba($white, .75)
+	&:hover
+		path, rect
+			fill: $white
+
+.menu-contact
+	display: block
+	+media-query(lap)
+		display: inline-block
 
 .container
 	max-width: $site-width
 	width: 90%
 	margin: 0 auto
 
-.btn 
-	@extend %pos--rel
-	@extend %dis-inline-block
-	@extend %gotham-bold
-	@extend %text--uppercase
-	@extend %letter-spacing--small
-	+font-size(16px)
-	overflow: hidden
-	padding: 15px 25px
-	text-decoration: none
-	border: 1px solid $white
-	transition: .3s
-	-webkit-backface-visibility: hidden
-	&:after
-		content: ''
-		@extend %pos--abs
-		z-index: -1
-		left: 0
-		top: 100%
-		width: 100%
-		height: 100%
-		background: $white
-		transition: .3s
-	&:hover
-		color: $text-dark
-		&:after
-			top: 0
-	+media-query(lap)
-		+font-size(24px)
-		padding: 20px 70px
-
 .has-dark-bg
 	color: $white
 
-
-//temp header
 .coming-soon
 	@extend %pos--rel
 	@extend %text--center
 	@extend %margin-off
+	padding: 300px 0 200px 0
 	overflow: hidden
-	height: 100vh
+	height: auto
 	display: flex
 	justify-content: center
 	align-items: center
+	+media-query(lap)
+		height: 100vh
+		padding: 0
 
 .coming-soon--text
 	@extend %gotham-light
 	@extend %text--uppercase
 	@extend %letter-spacing--large
 	@extend %dis-inline-block
-	+font-size(18px, $line-height:false)
+	@extend %margin-off
+	@extend %pos--rel
+	z-index: 10
+	+font-size(16px, $line-height:false)
 	line-height: 1.5
 	color: #45c0ff
 	background: -webkit-linear-gradient(left, #00a8ff 0%, #309B92 100%)
@@ -109,19 +102,14 @@
 .coming-soon--title
 	@extend %dis-block
 	@extend %gotham-bold
-	+font-size(16px, $line-height:false)
+	+font-size(14px, $line-height:false)
 	line-height: 2
 	+media-query(lap)
 		+font-size(18px, $line-height:false)
 
-.about-me
-	padding: 160px 0
-
 .contact
-	@extend %pos--rel
 	@extend %text--center
-	padding: 50px 0 150px 0
-	overflow: hidden
+	padding: 100px 0
 
 .contact-blurb
 	@extend %gotham-light

@@ -1,29 +1,28 @@
 .work
-	background: $white
-	padding: 50px 0 100px 0
 	box-shadow: 0 0px 180px 0px rgba($glow-blue, .75)
-
-.project-item
-	margin-bottom: 24px
 
 .project-image-wrap
 	@extend %pos--rel
-	min-height: 275px
+	min-height: 300px
 	background-color: #fafbfc
-	border-radius: 3px
 	transition: .3s
 	overflow: hidden
 	&:hover
 		.project-name,
 		.project-link
 			opacity: 1
+	+media-query(desk)
+		min-height: 350px
 
-.project-name
+.project-name,
+.project-link
 	@extend %pos--abs
-	@extend %margin-off
-	@extend %gotham-light
 	@extend %text--uppercase
 	@extend %letter-spacing--small
+
+.project-name
+	@extend %margin-off
+	@extend %gotham-light
 	z-index: 10
 	width: 100%
 	height: 100%
@@ -35,10 +34,7 @@
 	transition: .3s
 
 .project-link
-	@extend %pos--abs
 	@extend %gotham-bold
-	@extend %text--uppercase
-	@extend %letter-spacing--small
 	z-index: 20
 	right: 0
 	bottom: 0
@@ -54,35 +50,58 @@
 		color: $text-dark
 
 .ezrac
-	background: url(../img/ezrac-hover.jpg) no-repeat center/cover
+	background: url(../img/work/ezrac-small.jpg) no-repeat center/cover
+	+media-query(desk)
+		background: url(../img/work/ezrac-hover.jpg) no-repeat center/cover
 	.project-name
-		+background(linear-gradient(-45deg, rgba(#780206, .85) 10%, rgba(#061161, .85) 90%))
+		+background(linear-gradient(-45deg, rgba(#780206, .7) 10%, rgba(#061161, .7) 90%))
 
 .orlando-memory
-	background: url(../img/orlando-hover.jpg) no-repeat center top/cover
+	background: url(../img/work/orlando-small.jpg) no-repeat center top/cover
+	+media-query(desk)
+		background: url(../img/work/orlando-hover.jpg) no-repeat center top/cover
 	.project-name
-		+background(linear-gradient(-45deg, rgba(#dca932, .85) 10%, rgba(#1d7272, .85) 90%))
+		+background(linear-gradient(-45deg, rgba(#dca932, .7) 10%, rgba(#1d7272, .7) 90%))
 
 .santa
-	background: url(../img/santa-hover.jpg) no-repeat center top/cover
+	background: url(../img/work/santa-small.jpg) no-repeat center top/cover
+	+media-query(desk)
+		background: url(../img/work/santa-hover.jpg) no-repeat center top/cover
 	.project-name
-		+background(linear-gradient(-45deg, rgba(#7f080c, .85) 10%, rgba(#0e4519, .85) 90%))
+		+background(linear-gradient(-45deg, rgba(#7f080c, .7) 10%, rgba(#0e4519, .7) 90%))
+
+.property
+	background: url(../img/work/property-small.jpg) no-repeat center top/cover
+	+media-query(desk)
+		background: url(../img/work/property-large.jpg) no-repeat center top/cover
+	.project-name
+		+background(linear-gradient(-45deg, rgba(#ff9408, .7) 10%, rgba(#007FCD, .7) 90%))
 
 .app-icon
-	background: url(../img/app-hover.jpg) no-repeat center/cover
+	background: url(../img/work/app-small.jpg) no-repeat center/cover
+	+media-query(desk)
+		background: url(../img/work/app-hover.jpg) no-repeat center/cover
 	.project-name
-		+background(linear-gradient(-45deg, rgba(#ec7100, .85) 10%, rgba(#ffb50e, .85) 90%))
+		+background(linear-gradient(-45deg, rgba(#ec7100, .7) 10%, rgba(#ffb50e, .7) 90%))
+
+.canvas
+	background: url(../img/work/canvas-small.jpg) no-repeat center top/cover
+	+media-query(desk)
+		background: url(../img/work/canvas-large.jpg) no-repeat center top/cover
+	.project-name
+		+background(linear-gradient(-45deg, rgba(#0a0c0f, .7) 30%, rgba(#ff8000, .7) 90%))
 
 .dribbble-link
 	@extend %dis-block
 	@extend %text--center
-	margin: 50px 0 0 0
-	padding: 15px 0
+	background-color: $white
+	margin: 0
+	padding: 50px 0
 	color: #444
 	transition: .3s
 	img
 		@extend %dis-block
 		margin: 0 auto 10px auto
 	&:hover
-		background-color: #f4f6f8
+		background-color: rgba($white, .9)
 
