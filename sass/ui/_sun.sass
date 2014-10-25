@@ -2,66 +2,66 @@
 //	Sun
 //-----------------------------------------------------------------------------------------
 
-@keyframes rotate
-	0%
-		+transform(translateX(-50%) translateY(-50%) rotate(0deg))
-	100%
-		+transform(translateX(-50%) translateY(-50%) rotate(360deg))
+// @keyframes rotate
+// 	0%
+// 		+transform(translateX(-50%) translateY(-50%) rotate(0deg))
+// 	100%
+// 		+transform(translateX(-50%) translateY(-50%) rotate(360deg))
 
-+media-query(desk)
-	.sun
-		position: absolute
-		width: 25px
-		height: 25px
-		border-radius: 50%
-		background: $white
-		top: 50%
-		left: 50%
-		box-shadow: 0 0 275px 40px #d3fbc0, 0 0 20px rgba($white, 0.5)
-		+transform(translateX(-50%) translateY(-50%))
+// +media-query(desk)
+// 	.sun
+// 		position: absolute
+// 		width: 25px
+// 		height: 25px
+// 		border-radius: 50%
+// 		background: $white
+// 		top: 50%
+// 		left: 50%
+// 		box-shadow: 0 0 275px 40px #d3fbc0, 0 0 20px rgba($white, 0.5)
+// 		+transform(translateX(-50%) translateY(-50%))
 
-	.spear
-		position: absolute
-		top: 0
-		left: 50%
-		width: 1px
-		height: 500px
-		+transform(rotate(10deg))
-		+background-image(linear-gradient(top,	rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 50%,rgba(255,255,255,0) 100%))
+// 	.spear
+// 		position: absolute
+// 		top: 0
+// 		left: 50%
+// 		width: 1px
+// 		height: 500px
+// 		+transform(rotate(10deg))
+// 		+background-image(linear-gradient(top,	rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 50%,rgba(255,255,255,0) 100%))
 
-	.border-wrap
-		position: relative
-		height: 500px
+// 	.border-wrap
+// 		position: relative
+// 		height: 500px
 
-	.border
-		position: absolute
-		top: 50%
-		left: 50%
-		border-radius: 50%
-		border-style: solid
-		border-color: rgba($white, .1) rgba($white, .1) rgba($white, .075) rgba($white, .05)
-		+transform(translateX(-50%) translateY(-50%))
+// 	.border
+// 		position: absolute
+// 		top: 50%
+// 		left: 50%
+// 		border-radius: 50%
+// 		border-style: solid
+// 		border-color: rgba($white, .1) rgba($white, .1) rgba($white, .075) rgba($white, .05)
+// 		+transform(translateX(-50%) translateY(-50%))
 			
-	.border-1
-		width: 400px
-		height: 400px
-		border-width: 15px
-		animation: rotate 200s infinite linear
+// 	.border-1
+// 		width: 400px
+// 		height: 400px
+// 		border-width: 15px
+// 		animation: rotate 200s infinite linear
 
-	.border-2
-		width: 350px
-		height: 350px
-		border-width: 2px
-		animation: rotate 60s infinite linear
+// 	.border-2
+// 		width: 350px
+// 		height: 350px
+// 		border-width: 2px
+// 		animation: rotate 60s infinite linear
 
-	.border-3
-		width: 280px
-		height: 280px
-		border-width: 5px
-		animation: rotate 40s infinite linear
+// 	.border-3
+// 		width: 280px
+// 		height: 280px
+// 		border-width: 5px
+// 		animation: rotate 40s infinite linear
 
-	.border-4
-		width: 250px
-		height: 250px
-		border-width: 2px
-		animation: rotate 20s infinite linear
+// 	.border-4
+// 		width: 250px
+// 		height: 250px
+// 		border-width: 2px
+// 		animation: rotate 20s infinite linear

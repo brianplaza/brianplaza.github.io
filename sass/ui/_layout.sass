@@ -44,6 +44,9 @@
 		+font-size(14px)
 		margin: 10px
 		padding: 10px 15px
+	display: none
+	+media-query(lap)
+		display: inline-block
 
 .menu-dribbble,
 .menu-linkedin
@@ -56,7 +59,7 @@
 			fill: $white
 
 .menu-contact
-	display: block
+	//display: block
 	+media-query(lap)
 		display: inline-block
 
@@ -72,9 +75,9 @@
 	@extend %pos--rel
 	@extend %text--center
 	@extend %margin-off
-	padding: 300px 0 200px 0
 	overflow: hidden
 	height: auto
+	padding: 150px 0
 	display: flex
 	justify-content: center
 	align-items: center
@@ -109,7 +112,7 @@
 
 .contact
 	@extend %text--center
-	padding: 100px 0
+	padding: 200px 0
 
 .contact-blurb
 	@extend %gotham-light
