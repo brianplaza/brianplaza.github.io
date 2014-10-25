@@ -16,15 +16,15 @@
 	min-height: 225px
 	transition: .3s
 	overflow: hidden
-	&:hover,
-	.hover-effect
-		.project-name,
-		.project-link
-			opacity: 1
 	+media-query(lap)
 		min-height: 280px
 	+media-query(desk)
 		min-height: 350px
+		&:hover,
+		.hover-effect
+			.project-name,
+			.project-link
+				opacity: 1
 
 .project-name
 	@extend %pos--abs
