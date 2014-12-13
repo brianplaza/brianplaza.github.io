@@ -91,10 +91,10 @@
 	@extend %margin-off
 	@extend %pos--rel
 	z-index: 10
-	+font-size(36px, $line-height:false)
+	+font-size(24px, $line-height:false)
 	line-height: 1.5
 	color: #45c0ff
-	background: -webkit-linear-gradient(left, #00a8ff 0%, #309B92 100%)
+	background: -webkit-linear-gradient(left, #00a8ff 0%, #00c8d0 100%)
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 	+media-query(lap)
@@ -107,8 +107,7 @@
 	@extend %dis-block
 	@extend %pos--rel
 	z-index: 10
-	+font-size(16px, $line-height:false)
-	line-height: 2
+	+font-size(14px, $line-height:false)
 	color: $white
 	+media-query(lap)
 		+font-size(18px, $line-height:false)
@@ -118,6 +117,9 @@
 	top: 50%
 	left: 50%
 	border-radius: 50%
+	display: none
+	+media-query(lap)
+		display: block
 
 .ring--border
 	width: 580px
@@ -136,6 +138,7 @@
 	height: 576px
 	margin: -288px 0 0 -288px
 	background-color: #080c14
+	@extend %bg-noise
 
 .contact
 	@extend %text--center
@@ -143,5 +146,9 @@
 
 .contact-blurb
 	@extend %sentinel
+	color: #45c0ff
+	background: -webkit-linear-gradient(left, #00a8ff 0%, #00c8d0 100%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
 	font-size: 32px
 	margin-bottom: 50px
