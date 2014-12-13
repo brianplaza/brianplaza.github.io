@@ -71,7 +71,7 @@
 .has-dark-bg
 	color: $white
 
-.coming-soon
+.title
 	@extend %pos--rel
 	@extend %text--center
 	@extend %margin-off
@@ -85,36 +85,63 @@
 		height: 100vh
 		padding: 0
 
-.coming-soon--text
-	@extend %gotham-light
-	@extend %text--uppercase
-	@extend %letter-spacing--large
+.title--job
+	@extend %sentinel
 	@extend %dis-inline-block
 	@extend %margin-off
 	@extend %pos--rel
 	z-index: 10
-	+font-size(16px, $line-height:false)
+	+font-size(36px, $line-height:false)
 	line-height: 1.5
 	color: #45c0ff
 	background: -webkit-linear-gradient(left, #00a8ff 0%, #309B92 100%)
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 	+media-query(lap)
-		+font-size(36px, $line-height:flase)
+		+font-size(45px, $line-height:flase)
 
-.coming-soon--title
+.title--location
+	@extend %gotham-light
+	@extend %text--uppercase
+	@extend %letter-spacing--small
 	@extend %dis-block
-	@extend %gotham-bold
-	+font-size(14px, $line-height:false)
+	@extend %pos--rel
+	z-index: 10
+	+font-size(16px, $line-height:false)
 	line-height: 2
+	color: $white
 	+media-query(lap)
 		+font-size(18px, $line-height:false)
+
+.ring
+	@extend %pos--abs
+	top: 50%
+	left: 50%
+	border-radius: 50%
+
+.ring--border
+	width: 580px
+	height: 580px
+	margin: -290px 0 0 -290px
+	border: 1px solid rgba($white, .1)
+
+.ring--glow
+	width: 580px
+	height: 580px
+	margin: -290px 0 0 -290px
+	@include background-image(linear-gradient(right top,  rgba(255,255,255,1) 15%,rgba(255,255,255,0) 35%))
+
+.ring--inner
+	width: 576px
+	height: 576px
+	margin: -288px 0 0 -288px
+	background-color: #080c14
 
 .contact
 	@extend %text--center
 	padding: 200px 0
 
 .contact-blurb
-	@extend %gotham-light
-	@extend %text--uppercase
+	@extend %sentinel
+	font-size: 32px
 	margin-bottom: 50px

@@ -9,7 +9,7 @@
 	overflow: hidden
 	padding: 8px 12px
 	text-decoration: none
-	border: 1px solid $white
+	border: 1px solid rgba($white, .6)
 	transition: .3s
 	-webkit-backface-visibility: hidden
 	&:after
@@ -24,6 +24,7 @@
 		transition: .3s
 	&:hover
 		color: $text-dark
+		border: 1px solid $white
 		&:after
 			top: 0
 	+media-query(lap)
@@ -34,8 +35,8 @@
 	@extend %letter-spacing--small
 	padding: 15px 25px
 	+media-query(lap)
-		+font-size(24px)
-		padding: 20px 70px
+		+font-size(20px)
+		padding: 20px 50px
 
 .planet
 	@extend %pos--abs
