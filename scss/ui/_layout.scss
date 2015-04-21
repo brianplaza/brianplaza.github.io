@@ -1,0 +1,79 @@
+
+#canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.container {
+	max-width: $site-width;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.link-item {
+	@extend %dis-inline-block;
+	padding: 10px 15px 0 0;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.link-dribbble,
+.link-linkedin,
+.link-contact {
+	path, rect {
+		transition: 0.15s;
+		fill: rgba($white, 0.75);
+	}
+	&:hover {
+		path, rect {
+			fill: $white;
+		}
+	}
+}
+
+.title {
+	@extend %pos--rel;
+	overflow: hidden;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.container {
+		max-width: ($site-width * 0.75);
+	}
+}
+
+.title--job {
+	@extend %dis-inline-block;
+	@extend %margin-off;
+
+	@extend %header-serif;
+	@include font-size(20px, $line_height: false);
+	line-height: 1.5;
+	color: #45c0ff;
+
+	background: -webkit-linear-gradient(left, #00a8ff 0%, #00c8d0 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	
+	@include media-query(lap) {
+		@include font-size(36px, $line_height: false);
+	}
+}
+
+.title--name {
+	@extend %dis-block;
+	@extend %margin-half--ends;
+
+	@extend %header-sans;
+	@include font-size(14px, $line_height: false);
+	@extend %text--uppercase;
+	@extend %letter-spacing--small;
+	color: $white;
+
+	@include media-query(lap) {
+		@include font-size(18px, $line_height: false);
+	}
+}
