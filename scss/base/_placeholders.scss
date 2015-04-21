@@ -1,0 +1,21 @@
+//-----------------------------------------------------------------------------------------
+//  Typography
+//-----------------------------------------------------------------------------------------
+
+// ----- Typefaces ----- //
+
+%header-sans {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+}
+
+%header-serif {
+	font-family: "Merriweather", serif;
+	font-weight: 300;
+}
+
+// ----- Letter Spacing ----- //
+
+%letter-spacing--small {
+	letter-spacing: 3px;
+}

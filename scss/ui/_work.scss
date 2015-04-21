@@ -1,0 +1,128 @@
+.work {
+	background-color: $white;
+}
+
+.hello {
+	margin: 50px 0;
+	@extend %sentinel;
+	@extend %text--left;
+	@include media-query(lap) {
+		margin: 75px 0;
+	}
+
+	@include media-query(desk) {
+		margin: 100px 0;
+	}
+}
+
+.project-image-wrap {
+	@extend %pos--rel;
+	min-height: 225px;
+	transition: 0.3s;
+	overflow: hidden;
+	@include media-query(lap) {
+		min-height: 280px;
+	}
+
+	@include media-query(desk) {
+		min-height: 350px;
+		&:hover,
+		.hover-effect {
+			.project-name,
+			.project-link {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.project-name {
+	@extend %pos--abs;
+	@extend %margin-off;
+	@extend %sentinel-bold;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	color: $white;
+	line-height: 1.5;
+	opacity: 0;
+	transition: 0.3s;
+}
+
+.ezrac {
+	background: url(../img/work/ezrac-small.jpg) no-repeat center / cover;
+	@include media-query(desk) {
+		background: url(../img/work/ezrac-hover.jpg) no-repeat center / cover;
+		.project-name {
+			@include background(linear-gradient(-45deg, rgba(#780206, 0.85) 10%, rgba(#061161, 0.85) 90%));
+		}
+	}
+}
+
+.orlando-memory {
+	background: url(../img/work/orlando-small.jpg) no-repeat center top / cover;
+	@include media-query(desk) {
+		background: url(../img/work/orlando-hover.jpg) no-repeat center top / cover;
+		.project-name {
+			@include background(linear-gradient(-45deg, rgba(#dca932, 0.85) 10%, rgba(#1d7272, 0.85) 90%));
+		}
+	}
+}
+
+.santa {
+	background: url(../img/work/santa-small.jpg) no-repeat center top / cover;
+	@include media-query(desk) {
+		background: url(../img/work/santa-hover.jpg) no-repeat center top / cover;
+		.project-name {
+			@include background(linear-gradient(-45deg, rgba(#7f080c, 0.85) 10%, rgba(#0e4519, 0.85) 90%));
+		}
+	}
+}
+
+.property {
+	background: url(../img/work/property-small.jpg) no-repeat center top / cover;
+	@include media-query(desk) {
+		background: url(../img/work/property-large.jpg) no-repeat center top / cover;
+		.project-name {
+			@include background(linear-gradient(-45deg, rgba(#ff9408, 0.85) 10%, rgba(#007fcd, 0.85) 90%));
+		}
+	}
+}
+
+.app-icon {
+	background: url(../img/work/app-small.jpg) no-repeat center / cover;
+	@include media-query(desk) {
+		background: url(../img/work/app-hover.jpg) no-repeat center / cover;
+		.project-name {
+			@include background(linear-gradient(-45deg, rgba(#ec7100, 0.85) 10%, rgba(#ffb50e, 0.85) 90%));
+		}
+	}
+}
+
+.canvas {
+	background: url(../img/work/canvas-small.jpg) no-repeat center top / cover;
+	@include media-query(desk) {
+		background: url(../img/work/canvas-large.jpg) no-repeat center top / cover;
+		.project-name {
+			@include background(linear-gradient(-45deg, rgba(#0a0c0f, 0.85) 30%, rgba(#ff8000, 0.85) 90%));
+		}
+	}
+}
+
+.dribbble-link {
+	@extend %dis-block;
+	@extend %text--center;
+	//background-color: $white
+	margin: 0;
+	padding: 50px 0;
+	color: #444444;
+	transition: 0.3s;
+	svg {
+		@extend %dis-block;
+		margin: 0 auto 10px auto;
+	}
+	a {
+		color: #444444;
+	}
+}

@@ -1,0 +1,19 @@
+html,
+body {
+	height: 100%;
+}
+
+html {
+	background-color: #080c14;
+}
+
+::selection {
+	background: $glow-blue;
+	color: $white;
+	-webkit-text-fill-color: $white;
+}
+
+::-moz-selection {
+	background: $glow-blue;
+	color: $white;
+}
