@@ -1,0 +1,12 @@
+
+@mixin media-query($breakpoint) {
+	@for $i from 1 through length($bp-names) {
+		$name: nth($bp-names,$i);
+	
+		@if $breakpoint == $name {
+			@media screen and (min-width: nth($bp-sizes,$i)) {
+				@content;
+			}
+		}
+	}
+}

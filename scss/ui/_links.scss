@@ -1,0 +1,21 @@
+
+.link--item {
+	display: inline-block;
+	padding: 10px 20px 0 0;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.link--dribbble,
+.link--linkedin,
+.link--contact {
+	path, rect {
+		transition: 0.15s;
+		fill: rgba($white, 0.75);
+	}
+	&:hover {
+		path, rect {
+			fill: $white;
+		}
+	}
+}

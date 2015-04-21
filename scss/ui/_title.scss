@@ -1,0 +1,41 @@
+
+.title {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+
+	.container {
+		max-width: ($site-width * 0.75);
+	}
+}
+
+.title--job {
+	display: inline-block;
+	margin: 0;
+
+	@extend %header-serif;
+	font-size: 22px;
+	line-height: 1.5;
+	color: #45c0ff;
+
+	background: -webkit-linear-gradient(left, #00a8ff 0%, #00c8d0 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	
+	@include media-query(lap) {
+		font-size: 36px;
+	}
+}
+
+.title--name {
+	display: block;
+	margin: 10px 0;
+
+	@extend %header-sans;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: $white;
+}

@@ -1,9 +1,10 @@
-$black: #000;
+
+// breakpoints
+$bp-names: lap;
+$bp-sizes: 750px;
+
+// global site layout
+$site-width: 1180px;
+
+// colors
 $white: #fff;
-
-$glow-blue: #80d4ff;
-
-$text-dark: #143d52;
-$text-blue: #0af;
-
-$bp-sizes: 750px 1200px;
