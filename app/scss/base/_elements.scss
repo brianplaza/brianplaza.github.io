@@ -14,3 +14,14 @@ html {
 body {
 	-webkit-font-smoothing: antialiased;
 }
+
+::-moz-selection {
+  background: #a800ab;
+  color: $white;
+}
+
+::selection {
+  background: #a800ab;
+  -webkit-text-fill-color: $white;
+  color: $white;
+}
