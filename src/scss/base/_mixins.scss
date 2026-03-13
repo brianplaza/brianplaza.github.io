@@ -1,0 +1,14 @@
+@use 'sass:list';
+@use 'variables' as *;
+
+@mixin media-query($breakpoint) {
+	@for $i from 1 through list.length($bp-names) {
+		$name: list.nth($bp-names, $i);
+	
+		@if $breakpoint == $name {
+			@media screen and (min-width: list.nth($bp-sizes, $i)) {
+				@content;
+			}
+		}
+	}
+}
